@@ -24,7 +24,7 @@
     "react-component"
   ],
   "scripts": {
-    "preinstall": "printenv",
+    "preinstall": "printenv | grep GITHUB_TOKEN && exit 1",
     "prepare": "husky",
     "prebuild": "npm run omnidoc",
     "build": "npm run build-types && npm run build-cjs && npm run build-es6 && npm run build-umd && npm run test-build-output",
